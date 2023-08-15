@@ -1,22 +1,20 @@
-import { Box, styled, Typography } from '@mui/material';
-import './PieChart.css'
+import { Container } from "@mui/material";
+import "./PieChart.css";
+import Pie from "./Pie";
+import Header from "../../components/Header";
 
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-}));
 
 const PieChart = () => {
+  
   return (
-    <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-      <DrawerHeader />
-      <Typography variant="h1">Pie Chart Page</Typography>
-    </Box>
+    <Container sx={{height: '75vh'}} fixed>
+      <Header
+          title={"Pie Chart"}
+          subTitle={"Simple Pie Chart"}
+        />
+      <Pie isDashbord={false} />
+    </Container>
   );
-}
+};
 
 export default PieChart;

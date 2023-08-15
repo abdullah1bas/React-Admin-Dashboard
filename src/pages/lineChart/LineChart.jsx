@@ -1,21 +1,18 @@
+import Line from './Line';
 import './LineChart.css'
-import { Box, styled, Typography } from '@mui/material';
-
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-}));
+import { Container } from '@mui/material';
+import Header from "../../components/Header";
 
 const LineChart = () => {
+  
   return (
-    <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-      <DrawerHeader />
-      <Typography variant="h1">Line Chart Page</Typography>
-    </Box>
+    <Container sx={{ height: '75vh' }} fixed>
+      <Header
+          title={"Line Chart"}
+          subTitle={"Simple Line Chart"}
+        />
+      <Line  isDahboard={false} />
+    </Container>
   );
 }
 

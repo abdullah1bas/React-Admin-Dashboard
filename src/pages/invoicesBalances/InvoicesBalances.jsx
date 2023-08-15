@@ -2,11 +2,15 @@ import { Box } from '@mui/material';
 import './InvoicesBalances.css'
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { columns, rows } from './data';
-
+import Header from "../../components/Header";
 
 const InvoicesBalances = () => {
   return (
     <Box sx={{ height: 650 , minWidth: '800px', mx: 'auto' , overflowX: 'auto'}}>
+      <Header
+          title={"INVOICES"}
+          subTitle={"List of Invoice Balances"}
+        />
       <DataGrid sx={{overflowX: 'auto' , p: 1}}
         checkboxSelection
         slots={{

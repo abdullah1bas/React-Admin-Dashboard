@@ -10,6 +10,8 @@ import {
 import "./ProfileForm.css";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import Header from "../../components/Header";
+
 
 const data = [
   {
@@ -71,6 +73,10 @@ const ProfileForm = () => {
       // noValidate
       autoComplete="off"
     >
+      <Header
+          title={"CREATE USER"}
+          subTitle={"Create a New User Profile"}
+        />
       <Stack direction={"row"} gap={2}>
         <TextField
           error={Boolean(errors.firstName)}
